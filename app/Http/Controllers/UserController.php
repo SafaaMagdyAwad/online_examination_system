@@ -44,7 +44,7 @@ class UserController extends Controller
             "password"=> bcrypt($data['national_id']),
             "year_id"=>$data['year_id'],
             "admin"=>$data['admin'],
-            "natiomal_id"=>$data['national_id'],]);
+            "national_id"=>$data['national_id'],]);
             
         }else if($data['admin']==0){//student     constant data for a student
             $validation=$request->validate([
@@ -58,7 +58,7 @@ class UserController extends Controller
                 "password"=> bcrypt($data['national_id']),
                 "year_id"=>$data['year_id'],
                 "admin"=>$data['admin'],
-                "natiomal_id"=>$data['national_id'],
+                "national_id"=>$data['national_id'],
 
             ]);
         }
