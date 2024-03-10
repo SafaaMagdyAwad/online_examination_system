@@ -115,10 +115,3 @@ Route::group(['middleware'=> 'admin'], function () {
     
     
 }); 
-
-
-
-
-//try more data
-//time of exam
-//delete puttons
