@@ -25,6 +25,7 @@
     <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">login</button>
 </form>
 
+<a href="/forgot_password_form" class="btn btn-dark input mt-1 form-control loginPass">forgot my password</a>
 
 
 @endsection
