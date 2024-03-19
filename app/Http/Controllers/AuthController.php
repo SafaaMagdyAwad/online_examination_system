@@ -63,6 +63,49 @@ class AuthController extends Controller
         }
 
     }
+
+       public function forgot_password_form(){
+        return view('auth.forgetpassword',["msg"=>"enter email that you created the accont with"]);
+    }
+    public function forgot_password(Request $request){
+        //validation
+        // dd($request->email);
+        $user=User::where('email',$request->email)->first();
+        // dd($user);
+        if($user==null){
+            // dd("user is null");
+            return view('auth.forgetpassword',["msg"=>" wrong email enter email that you created the accont with"]);
+        }else{
+            //send email
+            $vCode=Str::random(4);
+            Mail::to($request->email)->send(new ForgetPasswordMail($vCode,$user));
+            return view('auth.vertivication_code',["vCode"=>$vCode,"user"=>$user,"msg"=>"we send vertivication code on your email"]);
+        }
+    }
+
+   
+    public function vCode(Request $request,$user){
+
+        if($request->vCode==$request->userVCode){
+            return view('auth.changePassword',["user"=>$user,"msg"=>"change your password"]);
+        }else{
+            return view('auth.vertivication_code',["vCode"=>$request->vCode,"user"=>$user,"msg"=>"wrong code:("]);
+        }
+
+    }
+    public function change_password(Request $request,$user_id){
+        $user=User::find($user_id);
+        
+        $password = bcrypt($request->password);
+        // dd($user);
+        $user->update([
+            'password'=>$password
+        ]);
+        return view("auth.login",["msg"=> "login","color"=>"success"]);
+    }
+  
+
+    
     public function logout(){
         Auth::logout();
         return view("welcome");
