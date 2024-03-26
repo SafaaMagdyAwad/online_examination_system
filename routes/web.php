@@ -26,6 +26,15 @@ Route::get('login_form', [AuthController::class,'login_form'])->name('login_form
 Route::post('login', [AuthController::class,'login'])->name('login');
 
 
+Route::get('/forgot_password_form',[AuthController::class,'forgot_password_form'])->name('forgot_password_form');
+Route::post('/forgot_password',[AuthController::class,'forgot_password'])->name('forgot_password');
+
+Route::post('/vCode/{user_id}',[AuthController::class,'vCode'])->name('vCode');
+
+
+Route::post('/change_password/{user_id}',[AuthController::class,'change_password'])->name('change_password');
+
+
 
 Route::get('logout', [AuthController::class,'logout'])->name('logout');
 
