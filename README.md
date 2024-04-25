@@ -49,6 +49,9 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
+.env
+MAIL_MAILER=smtp MAIL_HOST=sandbox.smtp.mailtrap.io MAIL_PORT=2525 MAIL_USERNAME=c6d6d9be382abb MAIL_PASSWORD=0536ead07b920b MAIL_ENCRYPTION=tlss MAIL_FROM_ADDRESS="contact@mywebsite.com" MAIL_FROM_NAME="control portal"
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
