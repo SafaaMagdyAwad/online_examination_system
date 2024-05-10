@@ -87,11 +87,12 @@
                   </li>
                   <li class="nav-item">
                     <a href="{{route('game')}}" class="nav-link" >play games</a>
-      
                   </li>
                   <li class="nav-item">
                     <a href="{{route('bmiform')}}" class="nav-link" >Be healthy</a>
-      
+                  </li>
+                <li class="nav-item">
+                    <a href="{{route('ageCalc')}}" class="nav-link" >findout your age</a>
                   </li>
               </ul>
 
