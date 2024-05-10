@@ -22,6 +22,8 @@ Route::get('/',[AuthController::class,'start'])->name('start');
 
 Route::get('/game',[AuthController::class,'game'])->name('game');
 
+Route::get('/ageCalc',[AuthController::class,'ageCalc'])->name('ageCalc');
+
 Route::get('/bmiform',[AuthController::class,'bmiform'])->name('bmiform');
 Route::post('/bmi',[AuthController::class,'bmi'])->name('bmi');
 
