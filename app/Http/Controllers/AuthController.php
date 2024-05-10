@@ -24,6 +24,11 @@ class AuthController extends Controller
         return view('game.index');
     }
 
+     public function ageCalc(){
+        return view('ageCalc.agecalc');
+    }
+
+
     public function start(){
         $logedinuser=Auth::user();
         if($logedinuser!=null){
