@@ -3,6 +3,9 @@ i learned more during writing it ,it is more orgnized and structured than my ear
 it give user the ability to enter the site in case of forgotting password using email,then a user after receiving the email he can change the password .
 
 
+in the future im planning to add timer to the exam & modify the ui.
+
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
