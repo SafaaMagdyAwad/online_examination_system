@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layout.app')
 @section('title')
     add exam
@@ -61,59 +60,4 @@
 </form>
 
     
-=======
-@extends('layout.app')
-@section('title')
-    add exam
-@endsection
-@section('user')
-
-    <a href="{{route('adminhome')}}" class="nav-link" >{{$logedinuser['name']}} home</a>
-    
-
-@endsection
-@section('link1')
-
-    <a href="{{route('logout')}}" class="nav-link">logout</a>
-@endsection
-@section('content')
-
-{{$msg}}
-
-<form method="post" action="{{route('exam.create')}}">
-    @csrf
-    
-    <div>
-        <input type="text" class="input mt-1 form-control loginPass" placeholder="title" name="title">
-    </div>
-   
-    <div>
-        <input type="time" class="input mt-1 form-control loginPass" placeholder="start" name="start"  >
-    </div>
-    <div>
-        <input type="time" class="input mt-1 form-control loginPass" placeholder="end" name="end"  >
-    </div>
-    <div>
-        <input type="date" class="input mt-1 form-control loginPass" placeholder="Start Date" name="sDate"  >
-    </div>
-    <div>
-        <input type="date" class="input mt-1 form-control loginPass" placeholder="End Date" name="eDate"  >
-    </div>
-    <div>
-        <select class="input mt-1 form-control loginPass" name="year_id" id="year_id">
-            <option selected disabled >select year</option>
-            <option value=1 >first year</option>
-            <option value=2 >second year</option>
-            <option value=3 >third year</option>
-            <option value=4 >forth year</option>
-        </select>
-
-        
-    </div>
-   
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">add exam</button>
-</form>
-
-    
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
 @endsection

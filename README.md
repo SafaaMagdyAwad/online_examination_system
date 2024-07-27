@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-=======
+     
+## project difinition
 this is a control portal onine examination system it, im working on updating it and adding more features on it .
 i learned more during writing it ,it is more orgnized and structured than my earliest projects , it has advanced technologies like emails , has other funny js pages for games like age calculate, BMI calclate, drag&drop.
 it give user the ability to enter the site in case of forgotting password using email,then a user after receiving the email he can change the password .
@@ -10,7 +10,7 @@ in the future im planning to add timer to the exam & modify the ui.
 
 
 
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
+<!-- >>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8 -->
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -62,12 +62,15 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
-<<<<<<< HEAD
-=======
-.env
-MAIL_MAILER=smtp MAIL_HOST=sandbox.smtp.mailtrap.io MAIL_PORT=2525 MAIL_USERNAME=c6d6d9be382abb MAIL_PASSWORD=0536ead07b920b MAIL_ENCRYPTION=tlss MAIL_FROM_ADDRESS="contact@mywebsite.com" MAIL_FROM_NAME="control portal"
+## Mail Configuration
 
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
+.env
+MAIL_MAILER=smtp MAIL_HOST=sandbox.smtp.mailtrap.io MAIL_PORT=2525 MAIL_USERNAME=c6d6d9be382abb MAIL_PASSWORD=0536ead07b920b MAIL_ENCRYPTION=tlss MAIL_FROM_ADDRESS="contact@mywebsite.com" MAIL_FROM_NAME="control portal" -->
+
+<!-- <!-- >>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8 -->
+
+
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
@@ -83,9 +86,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-<<<<<<< HEAD
-=======
+     
 
 
 
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
+
+<!-- >>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8 -->

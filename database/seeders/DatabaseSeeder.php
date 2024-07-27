@@ -10,7 +10,6 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-<<<<<<< HEAD
     // public function run(): void
     // {
     //     \App\Models\User::factory(1)->create();
@@ -32,15 +31,5 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             // Add other seeders here if needed
         ]);
-=======
-    public function run(): void
-    {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
     }
 }

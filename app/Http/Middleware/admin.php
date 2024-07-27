@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace App\Http\Middleware;
@@ -25,31 +24,3 @@ class admin
         }
     }
 }
-=======
-<?php
-
-namespace App\Http\Middleware;
-
-use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
-
-class admin
-{
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next): Response
-    {   
-        if($request->user()->admin()){
-
-            return $next($request);
-        }else{
-            return redirect('login_form');
-
-        }
-    }
-}
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
