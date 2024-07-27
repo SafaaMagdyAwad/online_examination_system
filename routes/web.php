@@ -22,7 +22,10 @@ Route::get('/',[AuthController::class,'start'])->name('start');
 
 Route::get('/game',[AuthController::class,'game'])->name('game');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
 Route::get('/ageCalc',[AuthController::class,'ageCalc'])->name('ageCalc');
 
 Route::get('/bmiform',[AuthController::class,'bmiform'])->name('bmiform');
@@ -87,6 +90,11 @@ Route::group(['middleware'=> 'user'], function () {
 
 
 Route::group(['middleware'=> 'admin'], function () {
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
     Route::get('add_admin_form', [UserController::class,'add_admin_form'])->name('add_admin_form');
     Route::get('add_student_form', [UserController::class,'add_student_form'])->name('add_student_form');
     Route::post('add_user', [UserController::class,'add_user'])->name('add_user');
@@ -94,8 +102,11 @@ Route::group(['middleware'=> 'admin'], function () {
     
     
     
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
     Route::get('allstudents', [UserController::class,'allstudents'])->name('allstudents');
     Route::get('alladmins', [UserController::class,'alladmins'])->name('alladmins');
     
@@ -116,7 +127,10 @@ Route::group(['middleware'=> 'admin'], function () {
     
     
     Route::get('all_exams',[ExamController::class,'all'])->name('exam.all'); 
+<<<<<<< HEAD
     Route::get('past_exams',[ExamController::class,'past_exams'])->name('exam.past'); 
+=======
+>>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
     
     
     Route::get('update_exam_form/{exam_id}',[ExamController::class,'update_form'])->name('exam.update_form');
@@ -145,7 +159,10 @@ Route::group(['middleware'=> 'admin'], function () {
     Route::put('update_multiChoice/{question_id}',[QuestionController::class,'update_multiChoice'])->name('question.update_multiChoice');
 
     Route::delete('delete_exam/{exam_id}',[ExamController::class,'delete'])->name('exam.delete');
+<<<<<<< HEAD
     Route::delete('hide_exam/{exam_id}',[ExamController::class,'hide'])->name('exam.hide');
+=======
+>>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
 
     Route::delete('delete_Discriptive/{question_id}',[QuestionController::class,'deleteDiscriptive'])->name('deleteDiscriptive');
     Route::delete('delete_MutiChoice/{question_id}',[QuestionController::class,'deleteMutiChoice'])->name('deleteMutiChoice');
@@ -158,4 +175,8 @@ Route::group(['middleware'=> 'admin'], function () {
 
 //try more data
 //time of exam
+<<<<<<< HEAD
 //delete puttons
+=======
+//delete puttons
+>>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
