@@ -22,10 +22,7 @@ Route::get('/',[AuthController::class,'start'])->name('start');
 
 Route::get('/game',[AuthController::class,'game'])->name('game');
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8
 Route::get('/ageCalc',[AuthController::class,'ageCalc'])->name('ageCalc');
 
 Route::get('/bmiform',[AuthController::class,'bmiform'])->name('bmiform');
