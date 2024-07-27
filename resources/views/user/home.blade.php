@@ -85,7 +85,6 @@
             <div class="card bg-light m-2">
                 <h6>title :{{$exam['title']}}</h6>
                 <p>starts at: {{$exam['start']}}   ,  ends at: {{$exam['end']}}</p>
-                <p>lasts from: {{$exam['sDate']}}   ,to {{$exam['eDate']}}</p>
                 <a href="{{route('exam.show',$exam['id'])}}" class="btn btn-success input mt-1 form-control loginPass" >دحيح وهحل الامتحان</a>
                 <a href="{{route('show_student_ans',$exam['id'])}}" class="btn btn-success input mt-1 form-control loginPass">درجتي كام يا عالم</a>
             </div>

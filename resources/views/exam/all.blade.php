@@ -40,6 +40,7 @@
                 <div class="row">
                     
                     <a href="{{route('exam.show',$exam['id'])}}" style="display: inline" class="btn btn-success input mt-1 form-control loginPass">view exam</a>
+                <a href="{{route('question.add_discriptive_form',$exam['id'])}}" style="display: inline" class="btn btn-success input mt-1 form-control loginPass">Add Questions</a>
                 <a href="{{route('students_degrees',$exam['id'])}}" style="display: inline" class="btn btn-success input mt-1 form-control loginPass">view students degrees</a>
                 
                

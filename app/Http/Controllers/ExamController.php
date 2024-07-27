@@ -62,43 +62,19 @@ class ExamController extends Controller
         $logedinuser=Auth::user();
         // dd($logedinuser);
         $exam=Exam::find($id);
-        
-        if($request->title){
             $validation=$request->validate([
                 'title'=> 'required',
-            ]);
-            $exam->update([
-                'title'=>$request->title,
-            ]);
-        }
-        else if($request->start){
-            $validation=$request->validate([
                 'start'=> 'required',
-            ]);
-            $exam->update([
-                'start'=>$request->start,
-            ]);
-        }
-        else if($request->end){
-            $validation=$request->validate([
                 'end'=> 'required',
-            ]);
-            $exam->update([
-                'end'=>$request->end,
-            ]);
-        }
-       
-        else if($request->year_id){
-            $validation=$request->validate([
                 'year_id'=> 'required',
             ]);
             $exam->update([
+                'title'=>$request->title,
+                'start'=>$request->start,
+                'end'=>$request->end,
                 'year_id'=>$request->year_id,
             ]);
-        }
-        else{
-        return view('exam.update',['exam'=>$exam,'logedinuser'=>$logedinuser,'msg'=> 'enter valid data']);
-        }
+       
         $exams=Exam::all();
         return view ("exam.all",["logedinuser"=>$logedinuser,"exams"=>$exams]);
     }

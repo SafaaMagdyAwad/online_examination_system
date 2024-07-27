@@ -42,7 +42,7 @@
     <h5>you have solved all discriptive questions or exam still dont contain discriptive questions</h5>
 @else
         @foreach ($discriptiveQuestions as $discriptiveQuestion)
-        <form method="post" action="{{route('store_stu_ans',$exam['id'])}}">
+        <form method="post" action="{{route('store_stu_ans_discriptive',$exam['id'])}}">
         
         @csrf
         
@@ -71,14 +71,14 @@
         </div>
         {{-- select boxes --}}
         <div>
-            <input name="hidden" value="{{$exam['id']}}" hidden>
+            <input name="exam_id" value="{{$exam['id']}}" hidden>
         </div>
         
         <div>
-            <input name="hidden" value="{{$discriptiveQuestion['id']}}" hidden>
+            <input name="question_id" value="{{$discriptiveQuestion['id']}}" hidden>
         </div>
         <div>
-            <input name="hidden" value="{{$logedinuser['id']}}" hidden>
+            <input name="user_id" value="{{$logedinuser['id']}}" hidden>
         </div>
 
         <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">submit this answer</button>

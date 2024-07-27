@@ -28,73 +28,34 @@
     @csrf
     @method('put')
     <div>
-        <input type="text" class="input mt-1 form-control loginPass" placeholder="{{$exam['title']}}" name="title">
+        <input type="text" class="input mt-1 form-control loginPass" placeholder="{{$exam['title']}}" name="title" value="{{$exam['title']}}">
     </div>
        
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update title</button>
-</form>
-<form method="post" action="{{route('exam.update',$exam['id'])}}">
-    @csrf
-    @method('put')
  
     <div>
-        <input type="time" class="input mt-1 form-control loginPass" placeholder="{{$exam['start']}}" name="start">
+        <input type="time" class="input mt-1 form-control loginPass" placeholder="{{$exam['start']}}" name="start" value="{{$exam['start']}}">
     </div>
 
-   
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update start</button>
-</form>
-<form method="post" action="{{route('exam.update',$exam['id'])}}">
-    @csrf
-    @method('put')
-    
     
     <div>
-        <input type="time" class="input mt-1 form-control loginPass" placeholder="{{$exam['end']}}" name="end">
+        <input type="time" class="input mt-1 form-control loginPass" placeholder="{{$exam['end']}}" name="end" value="{{$exam['end']}}">
     </div>
    
-    
-    
-   
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update end time</button>
-</form>
-<form method="post" action="{{route('exam.update',$exam['id'])}}">
-    @csrf
-    @method('put')
  
-    <div>
-        <input type="date" class="input mt-1 form-control loginPass" placeholder="{{$exam['sDate']}}" name="sDate">
-    </div>
-
-   
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update start date</button>
-</form>
-<form method="post" action="{{route('exam.update',$exam['id'])}}">
-    @csrf
-    @method('put')
-
-    <div>
-        <input type="date" class="input mt-1 form-control loginPass" placeholder="{{$exam['eDate']}}" name="eDate">
-    </div>
-
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update end date</button>
-</form>
-<form method="post" action="{{route('exam.update',$exam['id'])}}">
-    @csrf
-    @method('put')
     <div>
         <select class="input mt-1 form-control loginPass" name="year_id" id="year_id">
             <option selected disabled >{{$exam['year_id']}}</option>
-            <option value=1 >first year</option>
-            <option value=2 >second year</option>
-            <option value=3 >third year</option>
-            <option value=4 >forth year</option>
+            {{-- <option value={{$exam['year_id']}} selected>{{$exam['year_id']==1? "":""}}</option> --}}
+            <option value=1 {{$exam['year_id']==1? "selected":""}}>first year</option>
+            <option value=2 {{$exam['year_id']==2? "selected":""}}>second year</option>
+            <option value=3 {{$exam['year_id']==3? "selected":""}}>third year</option>
+            <option value=4 {{$exam['year_id']==4? "selected":""}}>forth year</option>
         </select>
 
         
     </div>
    
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update year</button>
+    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update exam</button>
 </form>
 
     

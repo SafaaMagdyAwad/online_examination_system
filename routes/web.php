@@ -71,7 +71,8 @@ Route::group(['middleware'=> 'user'], function () {
     // Route::get('all_exams_user/{user_id}',[ExamController::class,'all_exams_user'])->name('all_exams_user'); 
 
     
-    Route::post('store_stu_ans/{exam_id}',[StudentAnswerController::class,'store_stu_ans'])->name('store_stu_ans');
+    Route::post('store_stu_ans/{exam_id}',[StudentAnswerController::class,'store_stu_ans_discriptive'])->name('store_stu_ans_discriptive');
+    
     Route::post('store_stu_ans_multi/{exam_id}',[StudentAnswerController::class,'store_stu_ans_multi'])->name('store_stu_ans_multi');
     
     Route::get('delete_student/{student_id}',[UserController::class,'delete_student'])->name('deleteStudentAccount');

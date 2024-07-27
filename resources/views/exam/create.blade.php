@@ -35,15 +35,7 @@
         
         <input type="time" class="input mt-1 form-control loginPass" placeholder="end" name="end"  >
     </div>
-    <div>
-        <label > Start Date</label>
-
-        <input type="date" class="input mt-1 form-control loginPass" placeholder="Start Date" name="sDate"  >
-    </div>
-    <div>
-        <label > End Date</label>
-        <input type="date" class="input mt-1 form-control loginPass" placeholder="End Date" name="eDate"  >
-    </div>
+   
     <div>
         <select class="input mt-1 form-control loginPass" name="year_id" id="year_id">
             <option selected disabled >select year</option>
