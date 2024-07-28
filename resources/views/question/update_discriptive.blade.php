@@ -31,26 +31,16 @@
         <input type="text" class="input mt-1 form-control loginPass" placeholder="{{$question['question']}}" name="question">
     </div>
        
-    <button type="submit" class="btn btn-success input mt-1 form-control loginPass">update question</button>
-</form>{{--update question--}}
 
-<form method="post" action="{{route('question.update_discriptive',$question['id'])}}" style="display: inline">
-    @csrf
-    @method('put')
     <div>
         <input type="text" class="input mt-1 form-control loginPass" placeholder="{{$question['ans']}}" name="ans">
     </div>
-       
-    <button type="submit" class="btn btn-success input mt-1 form-control loginPass">update ans</button>
-</form>{{--update answer--}}
-<form method="post" action="{{route('question.update_discriptive',$question['id'])}}" style="display: inline">
-    @csrf
-    @method('put')
+
     <div>
         <input type="number" class="input mt-1 form-control loginPass" placeholder="{{$question['mark']}}" name="mark">
     </div>
        
-    <button type="submit" class="btn btn-success input mt-1 form-control loginPass">update mark</button>
+    <button type="submit" class="btn btn-success input mt-1 form-control loginPass">update Question</button>
 </form>{{--update mark--}}
 
 

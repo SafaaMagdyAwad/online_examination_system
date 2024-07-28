@@ -24,59 +24,41 @@
     {{$msg}}
 </h6>
 
-<form method="post" action="{{route('updateuser',$user['id'])}}" style="display: inline">
+<form method="post" action="{{route('user.update',$user['id'])}}" style="display: inline">
     @csrf
     @method('put')
     <div>
+        <label> Name</label>
         <input type="text" class="input mt-1 form-control loginPass" placeholder="{{$user['name']}}" name="name">
-    </div>
-       
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update name</button>
-</form>
-<form method="post" action="{{route('updateuser',$user['id'])}}">
-    @csrf
-    @method('put')
-    
+    </div> 
     
     <div>
+        <label> Email</label>
+
         <input type="email" class="input mt-1 form-control loginPass" placeholder="{{$user['email']}}" name="email">
     </div>
-   
-    
-    
-   
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update email</button>
-</form>
-<form method="post" action="{{route('updateuser',$user['id'])}}">
-    @csrf
-    @method('put')
-    
     
     <div>
+        <label> National_id</label>
+
         <input type="password" class="input mt-1 form-control loginPass" placeholder="{{$user['national_id']}}" name="password">
     </div>
-   
-    
-    
-   
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update password</button>
-</form>
-<form method="post" action="{{route('updateuser',$user['id'])}}">
-    @csrf
-    @method('put')
+
     <div>
+        <label> selet year</label>
+
         <select class="input mt-1 form-control loginPass" name="year_id" id="year_id">
-            <option selected disabled >{{$user['year_id']}}</option>
-            <option value=1 >first year</option>
-            <option value=2 >second year</option>
-            <option value=3 >third year</option>
-            <option value=4 >forth year</option>
+            {{-- <option selected disabled >{{$user['year_id']}}</option> --}}
+            <option value=1 {{$user['year_id']==1 ? "selected":""}} >first year</option>
+            <option value=2 {{$user['year_id']==2 ? "selected":""}} >second year</option>
+            <option value=3 {{$user['year_id']==3 ? "selected":""}} >third year</option>
+            <option value=4 {{$user['year_id']==4 ? "selected":""}}>forth year</option>
         </select>
 
         
     </div>
    
-    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update year</button>
+    <button type="submit" class="btn btn-warning input mt-1 form-control loginPass">update user</button>
 </form>
 
     

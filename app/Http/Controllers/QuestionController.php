@@ -109,6 +109,7 @@ class QuestionController extends Controller
         $validate=$request->validate([
             "question"=> "required", 
         ]);
+        // dd($request->all());
        MultiChoiceQuestion::create($request->all());        
        return view("question.addMultiChoice",["exam"=> $exam,"logedinuser"=> $logedinuser,"msg"=>"add question"]);
     }
@@ -144,31 +145,18 @@ class QuestionController extends Controller
     public function update_discriptive(Request $request, $id){
         $logedinuser=Auth::user();
         $question=DiscriptiveQuestion::where("id",$id)->first();
-        if($request->question){
+        
             $validator=$request->validate([
                 "question"=> "required",
-            ]);
-            $question->update([
-                "question"=>$request->question
-            ]);
-        }else if($request->ans){
-            $validator=$request->validate([
                 "ans"=> "required",
-            ]);
-            $question->update([
-                "ans"=>$request->ans
-            ]);
-        }else if($request->mark){
-            $validator=$request->validate([
                 "mark"=> "required",
             ]);
             $question->update([
-                "mark"=>$request->mark
+                "question"=>$request->question,
+                "ans"=>$request->ans,
+                "mark"=>$request->mark,
             ]);
-        }
-    
-        return view("question.update_discriptive",["logedinuser"=>$logedinuser,"msg"=>"successfully updated","question"=>$question]);
-       
+        return $this->show($question->exam_id);
     }
     public function update_multiChoice_form($id){
         $logedinuser=Auth::user();
@@ -179,67 +167,12 @@ class QuestionController extends Controller
     public function update_multiChoice(Request $request, $id){
         $logedinuser=Auth::user();
         $question=multiChoiceQuestion::where("id",$id)->first();
-        if($request->question){
-            $validator=$request->validate([
-                "question"=> "required",
-            ]);
-            $question->update([
-                "question"=>$request->question
-            ]);
-        }
-         if($request->correct2){
-            $validator=$request->validate([
-                "correct2"=> "required",
-            ]);
-            $question->update([
-                "correct1"=>"false",
-                "correct2"=>$request->correct2,
-                "correct3"=>"false",
-                "correct4"=>"false",
-            ]);
-        }
-         if($request->correct3){
-            $validator=$request->validate([
-                "correct3"=> "required",
-            ]);
-            $question->update([
-                "correct1"=>"false",
-                "correct2"=>"false",
-                "correct3"=>$request->correct3,
-                "correct4"=>"false",
-            ]);
-        }
-        if($request->correct4){
-            $validator=$request->validate([
-                "correct4"=> "required",
-            ]);
-            $question->update([
-                "correct1"=>"false",
-                "correct2"=>"false",
-                "correct3"=>"false",
-                "correct4"=>$request->correct4,
-            ]);
-        }else if($request->correct1){
-            $validator=$request->validate([
-                "ans"=> "required",
-            ]);
-            $question->update([
-                "correct1"=>$request->correct1,
-                "correct2"=>"false",
-                "correct3"=>"false",
-                "correct4"=>"false",
-            ]);
-        }
-         if($request->mark){
-            $validator=$request->validate([
-                "mark"=> "required",
-            ]);
-            $question->update([
-                "mark"=>$request->mark
-            ]);
-        }
+        $validate=$request->validate([
+            "question"=> "required", 
+        ]);
+        $question->update($request->all());
     
-        return view("question.update_multi_choice",["logedinuser"=>$logedinuser,"msg"=>"successfully updated","question"=>$question]);
+        return $this->show($question->exam_id);
        
     }
     

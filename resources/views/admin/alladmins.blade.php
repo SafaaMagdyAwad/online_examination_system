@@ -58,7 +58,7 @@
             <td>
 
                     
-                <a href="{{route('updateuser_form',$admin['id'])}}" class="btn btn-warning input mt-1 form-control loginPass">update  data</a>
+                <a href="{{route('update_form',$admin['id'])}}" class="btn btn-warning input mt-1 form-control loginPass">update  data</a>
                 
                 <form method="POST" style="display: inline" action="{{route('destroyuser',$admin['id'])}}"  >
                     @csrf
