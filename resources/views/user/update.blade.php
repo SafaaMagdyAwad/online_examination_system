@@ -29,19 +29,19 @@
     @method('put')
     <div>
         <label> Name</label>
-        <input type="text" class="input mt-1 form-control loginPass" placeholder="{{$user['name']}}" name="name">
+        <input type="text" class="input mt-1 form-control loginPass" value="{{$user['name']}}" name="name">
     </div> 
     
     <div>
         <label> Email</label>
 
-        <input type="email" class="input mt-1 form-control loginPass" placeholder="{{$user['email']}}" name="email">
+        <input type="email" class="input mt-1 form-control loginPass" value="{{$user['email']}}" name="email">
     </div>
     
     <div>
-        <label> National_id</label>
+        <label> password</label>
 
-        <input type="password" class="input mt-1 form-control loginPass" placeholder="{{$user['national_id']}}" name="password">
+        <input type="password" class="input mt-1 form-control loginPass" value="{{$user['national_id']}}" name="password">
     </div>
 
     <div>

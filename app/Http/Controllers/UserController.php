@@ -73,7 +73,6 @@ class UserController extends Controller
             ]);
         }
                     $logedinuser=Auth::user();
-                    
                     // Notification::send($logedinuser,new success($logedinuser));
                     return view("admin.home",["logedinuser"=>$logedinuser]);
 
@@ -133,63 +132,29 @@ class UserController extends Controller
 
     }
     
-    public function update(Request $request,$id){
-        $logedinuser=Auth::user();
-        
+    public function update(Request $request,$id)
+    {
        $user=User::find($id);
-       if($request->name){
+    //   dd($request->all());
         $validation=$request->validate([
-            "name"=>"required"
+            "name"=>"required",
+            "email"=>"required|email|unique:users",
+            "password"=>"required|min:6",
+            "year_id"=>"required",
         ]);
         $user->update([
             "name"=> $request->name,
-        ]);
-        
-        return view("user.update",["user"=>$user,"msg"=>"name updated successfully","logedinuser"=>$logedinuser]);
-       }else if($request->email){
-        $validation=$request->validate([
-            "email"=>"required|email|unique:users"
-        ]);
-        $user->update([
             "email"=> $request->email,
-        ]);
-
-        return view("user.update",["user"=>$user,"msg"=>"email updated successfully","logedinuser"=>$logedinuser]);
-       }else if($request->password){
-        $validation=$request->validate([
-            "password"=>"required|min:6"
-        ]);
-        $user->update([
             "password"=> $request->password,
-        ]);
-
-        return view("user.update",["user"=>$user,"msg"=>"password updated successfully","logedinuser"=>$logedinuser]);
-       }else if($request->year_id){
-        $validation=$request->validate([
-            "year_id"=>"required"
-        ]);
-        $user->update([
             "year_id"=> $request->year_id,
-        ]);
-
-        return view("user.update",["user"=>$user,"msg"=>"year updated successfully","logedinuser"=>$logedinuser]);
-       }else{
-       
-
-        return view("user.update",["user"=>$user,"msg"=>"you have to enter valid data","logedinuser"=>$logedinuser]);
-       }
-       
-
+        ]);   
+        return $this->allstudents();
     }
-
     public function destroy($id){//admin delets another admin or user
         $logedinuser=Auth::user();
-
         $user=User::find($id);
         // dd($user);
-
         $user->delete();
-
         return view("admin.home",["logedinuser"=>$logedinuser]);
     }
     public function adminhome(){
@@ -201,15 +166,8 @@ class UserController extends Controller
         if($logedinuser==null){
             return view("auth.login",["msg"=>"your not authnticated login ","color"=>"light"]);
         }else{
-           
-            
           return $this->examController->userfun();
-
        }
     }
-
-    // public function delete_student($id){
-    //     return redirect()->back() ->with('alert', 'wait the response of admin!');
-    // }
 
 }

@@ -76,7 +76,7 @@
                     
                
                 <div class="row">
-                    <a href="{{route('update_form',$student['id'])}}"  style="display: inline" class=" btn btn-warning input mt-1 form-control loginPass">update  data</a>
+                    <a href="{{route('user.update_form',$student['id'])}}"  style="display: inline" class=" btn btn-warning input mt-1 form-control loginPass">update  data</a>
                
                 <a href="{{route('student_degrees',$student['id'])}}"  style="display: inline" class="btn btn-success input mt-1 form-control loginPass">show degrees </a>
                 

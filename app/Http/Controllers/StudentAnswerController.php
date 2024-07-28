@@ -34,7 +34,6 @@ class StudentAnswerController extends Controller
         foreach($answerd_questions as $answerd_questions_id){
             $id[]=$answerd_questions_id->question_id;
         }
-   
         $discriptiveQuestions=DiscriptiveQuestion::where("exam_id",$exam_id)->whereNotIn("id",$id)->get();
         $multiChoiceQuestions=multiChoiceQuestion::where("exam_id",$exam_id)->whereNotIn("id",$id)->get();
         
@@ -42,6 +41,7 @@ class StudentAnswerController extends Controller
             return view("exam.show_for_user",["discriptiveQuestions"=> $discriptiveQuestions,"multiChoiceQuestions"=>$multiChoiceQuestions,"logedinuser"=> $logedinuser,"exam"=>$exam,"msg"=>true]);
         }else{
             if($type == "multi"){
+                $question=multiChoiceQuestion::findOrFail($request['question_id']);
                 if($question['correct1']=="true"){
                     if($request['student_ans']==$question['ans1']){
                         $request['mark']=$question['mark'];

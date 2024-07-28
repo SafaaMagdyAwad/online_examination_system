@@ -14,7 +14,7 @@
 @endsection
 
 @section('link1')
-    <a href="{{route('update_form',$logedinuser['id'])}}" class="nav-link">update my data</a>
+    <a href="{{route('user.update_form',$logedinuser['id'])}}" class="nav-link">update my data</a>
 @endsection
 
 @section('content')
