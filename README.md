@@ -64,12 +64,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Mail Configuration
 
-.env
-MAIL_MAILER=smtp MAIL_HOST=sandbox.smtp.mailtrap.io MAIL_PORT=2525 MAIL_USERNAME=c6d6d9be382abb MAIL_PASSWORD=0536ead07b920b MAIL_ENCRYPTION=tlss MAIL_FROM_ADDRESS="contact@mywebsite.com" MAIL_FROM_NAME="control portal" -->
-
-<!-- <!-- >>>>>>> 2efe76850da2bea73bf7bfa35f471564c0d749e8 -->
-
-
+hidden :>
 
 ## Contributing
 
